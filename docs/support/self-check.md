@@ -3,8 +3,8 @@
 Test your **Schema** before you start Day 1. If you can answer these without "guessing," you have the taste of a digital architect.
 
 ### Scenario 1: The Invisible Wall
-You've "hired" Lunar via Telegram. She says she has saved the files, but when you check `ls ~/Lunar_Archive/`, the folder is empty. 
-* **Question**: Is this more likely a failure in Lunar's **SOUL** (logic) or a failure in your **config.toml** (permission)? How would you prove it?
+You've "hired" Luna via Telegram. She says she has saved the files, but when you check `ls ~/archive/`, the folder is empty. 
+* **Question**: Is this more likely a failure in Luna's **SOUL** (logic) or a failure in your **config.toml** (permission)? How would you prove it?
 
 ### Scenario 2: The Duplicate Webhook
 You notice Stripe is sending 16 webhooks for a single payment. 

@@ -12,7 +12,7 @@ graph LR
     Bot <-->|API| ZC[ZeroClaw Service on VPS]
     
     subgraph "Your VPS (Ubuntu)"
-    ZC <-->|Read/Write| FS[Filesystem: /Lunar_Archive]
+    ZC <-->|Read/Write| FS[Filesystem: /archive]
     ZC <-->|Invoke| MCP[MCP: Web Search Tool]
     end
     

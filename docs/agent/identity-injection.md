@@ -1,6 +1,6 @@
 # Identity Injection: Shaping the Sub-Agent
 
-A blank AI model is a generalist. To create a highly specialized Sub-agent (like Nova or Lunar), you do not write complex code. You use the main agent to perform **Identity Injection**.
+A blank AI model is a generalist. To create a highly specialized Sub-agent, you do not write complex code. You use the main agent to perform **Identity Injection**.
 
 ### The Four Pillars of Identity
 
@@ -13,4 +13,4 @@ Every sub-agent in the ZeroClaw framework requires a dedicated workspace directo
 
 ### The Creation Protocol
 You never write these manually. You instruct your main Orchestrator Agent via Telegram:
-> "Use your `write_file` tool to create `SOUL.md` for Lunar. Her core value is extreme brevity and filtering out low-ROI noise."
+> "Use your `write_file` tool to create `SOUL.md` for Luna. Her core value is extreme brevity and filtering out low-ROI noise."

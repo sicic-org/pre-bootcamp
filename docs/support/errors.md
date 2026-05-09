@@ -10,4 +10,4 @@
 
 ### 3. ZeroClaw / Telegram Errors
 * **Bot not responding**: Check `zeroclaw service status`. Ensure your Token in `config.toml` is correct.
-* **Lunar can't write files**: Ensure the folder `/root/Lunar_Archive` exists and the path in `SKILL.md` is correct.
+* **Luna can't write files**: Ensure the folder `/root/archive` exists and the path in `SKILL.md` is correct.

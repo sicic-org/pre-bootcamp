@@ -2,6 +2,7 @@ site_name: Super Individuals Bootcamp
 site_description: The definitive guide to building your ZeroClaw Agent.
 theme:
   name: material
+  custom_dir: overrides
   palette:
     scheme: default
     primary: white
@@ -17,14 +18,14 @@ theme:
 nav:
   - Welcome: index.md
   - 1. The Foundation:
-      - "VPS: Your Cloud Territory": infrastructure/vps-linode.md
+      - "VPS: Your Cloud Territory": infrastructure/vps.md
       - "ZeroClaw Architecture": infrastructure/zeroclaw-core.md
   - 2. The Interface:
       - "Telegram: The Control Room": interface/telegram-bot.md
-      - "Commanding your Agent": interface/commands.md
   - 3. The Agent:
-      - "Identity Injection (SOUL/SKILL)": agent/identity.md
-      - "Sub-Agent: Lunar (Intelligence)": agent/lunar-case.md
+      - "Design The Workflow": agent/workflow-design.md
+      - "Identity Injection (SOUL/SKILL)": agent/identity-injection.md
+      - "Sub-Agent": agent/example-agent.md
       - "MCP: Power-ups & Tools": agent/mcp-tools.md
   - 4. Documentation:
       - "MkDocs: Build the Wiki": docs-site/mkdocs-setup.md
@@ -41,3 +42,15 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  header_links:
+    - label: SICIC Website
+      url: https://community.sicic.org
+    - label: Workshops
+      url: https://community.sicic.org/workshops/
+    - label: About
+      url: https://community.sicic.org/about/
