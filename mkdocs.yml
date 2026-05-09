@@ -1,0 +1,43 @@
+site_name: Super Individuals Bootcamp
+site_description: The definitive guide to building your ZeroClaw Agent.
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: white
+    accent: indigo
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.footer
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+
+nav:
+  - Welcome: index.md
+  - 1. The Foundation:
+      - "VPS: Your Cloud Territory": infrastructure/vps-linode.md
+      - "ZeroClaw Architecture": infrastructure/zeroclaw-core.md
+  - 2. The Interface:
+      - "Telegram: The Control Room": interface/telegram-bot.md
+      - "Commanding your Agent": interface/commands.md
+  - 3. The Agent:
+      - "Identity Injection (SOUL/SKILL)": agent/identity.md
+      - "Sub-Agent: Lunar (Intelligence)": agent/lunar-case.md
+      - "MCP: Power-ups & Tools": agent/mcp-tools.md
+  - 4. Documentation:
+      - "MkDocs: Build the Wiki": docs-site/mkdocs-setup.md
+      - "GitHub Pages: Go Public": docs-site/github-pages.md
+  - 5. Support:
+      - "Troubleshooting Dictionary": support/errors.md
+      - "Self-Check Challenge": support/self-check.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
