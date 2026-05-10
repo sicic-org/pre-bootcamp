@@ -1,17 +1,89 @@
-# Telegram: Your Mobile Control Room
+# Telegram: Your Everyday Control Room
 
-**"Why Telegram? Why not build a custom web app or use Slack?"**
+After your VPS is ready and ZeroClaw is installed, Week 1 becomes real the moment you connect your phone to your agent.
 
-### The "Why": Frictionless Leverage
+That is why we use **Telegram**.
 
-As a Super Individual, your most precious resource is attention. If you have to open a laptop, log into a portal, and navigate a dashboard just to give your AI a task, you won't use it.
+### Why Telegram Works So Well
 
-**Telegram provides the ultimate frictionless interface:**
-1. **Ubiquity**: It is already in your pocket. You can trigger complex research workflows, review AI summaries, or approve tasks while commuting or drinking coffee.
-2. **Conversational UI**: The natural interface for an AI Agent is conversation. Telegram natively supports text, audio, and documents.
-3. **Zero Frontend Cost**: Building a web interface takes weeks. Connecting a Telegram bot to your ZeroClaw agent takes 5 minutes. We leverage Telegram's billion-dollar infrastructure for free.
+The best interface is often the one you already use.
+
+Telegram gives beginners an immediate win:
+
+* you do not need to build a dashboard first
+* you do not need to learn a new interface
+* you can talk to your system from anywhere
+
+This matters more than it sounds. A powerful agent that is inconvenient to use quickly becomes dead software.
+
+### What It Feels Like
+
+Instead of opening a laptop and managing tabs, you can send a message from your phone and trigger a workflow directly.
+
+That makes the system feel personal and alive. It also helps non-technical participants understand the value fast, because the result is visible: **your own bot is responding to you, backed by your own server.**
+
+### Why Telegram Instead of WhatsApp?
+
+For most participants, there might be a comparison between Telegram and WhatsApp.
+
+We use Telegram because it is much easier to turn into a practical agent interface during a workshop.
+
+Telegram is a better fit for Intro Track because:
+
+1. **Bot friendliness**: Telegram is designed to work smoothly with bots and developer workflows.
+2. **Lower friction**: it is straightforward to create a bot, get a token, and connect it to your system.
+3. **Faster learning**: participants can see results quickly instead of fighting platform constraints.
+
+WhatsApp is familiar, but for this workshop it is a less practical starting point. It usually brings more platform restrictions, more setup friction, and less flexibility for quick experimentation.
+
+### Why Not Build a Custom App First?
+
+That would also be the wrong priority for Intro Track.
+
+We are not trying to impress people with frontend complexity. We are trying to prove that your own agent system can exist, respond, and do useful work with very little friction.
+
+That is why Telegram still gives us:
+
+1. **Speed**: you can get a working interface quickly.
+2. **Familiarity**: the interaction model is already natural.
+3. **Leverage**: you benefit from a mature messaging platform without building one yourself.
 
 ### How the Handshake Works
-1. You ask **BotFather** for an API Token.
-2. You place that token into ZeroClaw's `config.toml`.
-3. You start the service. Your VPS and your phone are now securely linked.
+
+The setup is simple:
+
+1. You create a bot using **BotFather**.
+2. You place the API token into ZeroClaw's `config.toml`.
+3. You start the service and test the connection.
+
+At that point, your phone and your VPS are linked.
+
+For many people, this is the first moment the workshop "clicks." It stops feeling like theory and starts feeling like ownership.
+
+### Ask AI If You're Stuck
+
+Telegram issues are usually easy to debug if you give AI the exact symptom, what you already configured, and any logs you can see.
+
+Try prompts like these:
+
+```text
+I am in Week 1 of the Super Individuals Intro Track. My Telegram bot exists, but it does not respond when I send a message.
+
+What I already did:
+- created the bot with BotFather
+- added the token to config.toml
+- restarted the service
+
+Here are the logs:
+[paste logs]
+
+Please give me a step-by-step checklist from simplest to most likely, and tell me how to verify each step.
+```
+
+```text
+I connected Telegram to my agent, but I do not understand how the message flow works between Telegram, the bot token, ZeroClaw, and my VPS.
+
+Please explain it in plain language using the Intro Track architecture.
+```
+
+For a reusable prompt template, see the [AI Debugging Guide](../support/ai-debugging.md).

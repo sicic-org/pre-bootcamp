@@ -1,5 +1,7 @@
 # The Error Dictionary
 
+If you want help turning an error into a good AI question, start with the [AI Debugging Guide](ai-debugging.md).
+
 ### 1. Terminal / VPS Errors
 * **`Connection Refused`**: Check if your VPS is running and your IP address is correct.
 * **`Permission Denied (publickey)`**: Your local SSH key isn't added to Linode. 

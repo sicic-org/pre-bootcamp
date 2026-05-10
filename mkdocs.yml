@@ -18,10 +18,10 @@ theme:
 nav:
   - Welcome: index.md
   - 1. The Foundation:
-      - "VPS: Your Cloud Territory": infrastructure/vps.md
-      - "ZeroClaw Architecture": infrastructure/zeroclaw-core.md
+      - "VPS: Your Private AI Home": infrastructure/vps.md
+      - "ZeroClaw: The Software That Runs Your Agent": infrastructure/zeroclaw-core.md
   - 2. The Interface:
-      - "Telegram: The Control Room": interface/telegram-bot.md
+      - "Telegram: Your Everyday Control Room": interface/telegram-bot.md
   - 3. The Agent:
       - "Design The Workflow": agent/workflow-design.md
       - "Identity Injection (SOUL/SKILL)": agent/identity-injection.md
@@ -31,6 +31,7 @@ nav:
       - "MkDocs: Build the Wiki": docs-site/mkdocs-setup.md
       - "GitHub Pages: Go Public": docs-site/github-pages.md
   - 5. Support:
+      - "AI Debugging Guide": support/ai-debugging.md
       - "Troubleshooting Dictionary": support/errors.md
       - "Self-Check Challenge": support/self-check.md
 
