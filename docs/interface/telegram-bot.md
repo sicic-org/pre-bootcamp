@@ -67,7 +67,7 @@ Telegram issues are usually easy to debug if you give AI the exact symptom, what
 Try prompts like these:
 
 ```text
-I am in Week 1 of the Super Individuals Intro Track. My Telegram bot exists, but it does not respond when I send a message.
+My Telegram bot exists, but it does not respond when I send a message.
 
 What I already did:
 - created the bot with BotFather

@@ -71,7 +71,7 @@ ZeroClaw problems become much easier to solve when you show AI the exact config 
 Try prompts like these:
 
 ```text
-I am following the Super Individuals Intro Track and ZeroClaw is installed, but it does not start correctly.
+ZeroClaw is installed on VPS, but it does not start correctly.
 
 Here is the relevant part of config.toml:
 [paste snippet]

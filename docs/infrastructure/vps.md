@@ -68,7 +68,7 @@ If you hit a blocker in Week 1, do not guess blindly. Ask AI with the exact comm
 Try prompts like these:
 
 ```text
-I am in Week 1 of the Super Individuals Intro Track and I cannot connect to my VPS with SSH.
+I cannot connect to my VPS with SSH.
 
 Command:
 ssh root@<my-ip>

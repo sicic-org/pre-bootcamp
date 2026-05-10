@@ -23,10 +23,10 @@ nav:
   - 2. The Interface:
       - "Telegram: Your Everyday Control Room": interface/telegram-bot.md
   - 3. The Agent:
-      - "Design The Workflow": agent/workflow-design.md
+      - "Workflow Design": agent/workflow-design.md
       - "Identity Injection (SOUL/SKILL)": agent/identity-injection.md
-      - "Sub-Agent": agent/example-agent.md
-      - "MCP: Power-ups & Tools": agent/mcp-tools.md
+      - "Research Agent Example": agent/example-agent.md
+      - "MCP Tools: Useful Abilities": agent/mcp-tools.md
   - 4. Documentation:
       - "MkDocs: Build the Wiki": docs-site/mkdocs-setup.md
       - "GitHub Pages: Go Public": docs-site/github-pages.md

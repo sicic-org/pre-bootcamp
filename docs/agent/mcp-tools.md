@@ -1,11 +1,93 @@
-# MCP: Giving Your Agent Eyes and Hands
+# MCP Tools: Giving Your Agent Useful Abilities
 
-Model Context Protocol (MCP) is what separates a "Chatbot" from an "Agent". It gives ZeroClaw the ability to interact with the real world.
+By Week 2, your agent has a role and a workflow. The next question is simple: **what is it actually allowed to do?**
 
-### The Tools of a Super Individual
-* **`web_search_tool`**: The "Eyes". Allows Luna to scan the live web instead of relying on outdated training data.
-* **Filesystem Tool**: The "Hands". Allows your agent to read your `USER.md` for context and write intelligence reports into your `archive`.
+That is where tools come in.
+
+### What MCP Means in Practice
+
+You do not need to memorize the protocol name first.
+
+For the Intro Track, the important idea is this: **tools give your agent abilities beyond plain conversation.**
+
+Without tools, the agent can only generate text.
+
+With tools, it can do things like:
+
+* search the web
+* read files
+* write files
+
+That is what makes it feel like an agent instead of just a chatbot.
+
+### The Two Abilities That Matter Most in Intro Track
+
+For the research agent example, two abilities are enough:
+
+* **web search**: this lets the agent gather live information instead of relying only on its built-in knowledge
+* **file writing**: this lets the agent save the result into your own system
+
+That combination is powerful because it supports the full path from request to reusable output.
+
+### Why We Keep the Tool Set Small
+
+Beginners often assume that more tools means a better agent.
+
+Usually it means more confusion.
+
+The Intro Track uses a deliberately small tool set so participants can understand:
+
+* what each tool does
+* when the agent should use it
+* how the final result moves into the filesystem
+
+This keeps the workshop focused on real understanding instead of tool collecting.
+
+### Looking Ahead
+
+In the Builder Track, tools become much broader:
+
+* more MCP integrations
+* custom toolchains
+* automation systems like n8n
+* more complex orchestration patterns
+
+But first, the Intro Track teaches the core pattern clearly.
 
 ### Configuring the Tools
-In the Intro Track, we enable tools via the `[[mcp.servers]]` section in your `config.toml`. 
-> **Crucial Tip:** Always verify your tools are `Active` by running `zeroclaw agent` and checking the startup logs.
+
+In practice, Intro Track tools are enabled through the `[[mcp.servers]]` section of your `config.toml`.
+
+The exact syntax matters less than the mental model:
+
+* enable the tool
+* confirm it is active
+* make sure the agent knows when to use it
+
+> **Tip:** Always verify your tools are active by running `zeroclaw agent` and checking the startup logs.
+
+### Ask AI If You're Stuck
+
+Tool issues are much easier to solve when you show AI the relevant config and describe the symptom clearly.
+
+Try prompts like these:
+
+```text
+My research agent is supposed to use web search, but it is not behaving as expected.
+
+Here is my relevant config and skill description:
+[paste snippet]
+
+Please explain whether the issue is more likely to be tool activation, workflow design, or prompt clarity, and tell me the next 3 checks.
+```
+
+```text
+I do not understand whether my agent really needs this tool.
+
+My agent's job is:
+[describe job]
+
+Please tell me which tools are truly necessary for an Intro Track version and which ones would add unnecessary complexity.
+```
+
+For a reusable prompt template, see the [AI Debugging Guide](../support/ai-debugging.md).
