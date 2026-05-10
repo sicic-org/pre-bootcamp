@@ -4,6 +4,8 @@ This wiki is not only here to explain the workshop. It is also here to help you 
 
 One of the best skills you can learn in the Intro Track is how to use AI well when something breaks.
 
+This matters because the workshop is not only about following steps. It is about learning how to reason through problems without freezing every time a tool, service, or config behaves unexpectedly.
+
 ### When to Ask AI for Help
 
 Ask AI when:
@@ -26,8 +28,6 @@ Those are too vague. Good debugging questions give the model enough context to r
 Copy this template and fill it in:
 
 ```text
-I am following the Super Individuals Intro Track.
-
 Goal:
 I am trying to [describe the step].
 
@@ -50,6 +50,8 @@ Please help me:
 4. tell me how to verify the fix worked
 ```
 
+If the first answer is unclear, keep going. A strong follow-up question is often better than starting over from scratch.
+
 ### What Good Debugging Context Looks Like
 
 The more precise your context, the better the answer.
@@ -69,6 +71,19 @@ Useful habits:
 * ask for the next checks in order, not twenty theories at once
 * ask how to verify the fix, not only how to apply it
 
+### How to Follow Up
+
+Good debugging is usually a short conversation, not one magic prompt.
+
+After the first answer, you can ask:
+
+* "Which of these causes is most likely in my case, and why?"
+* "I checked step 1 and step 2. Here are the results. What is the next best check?"
+* "Can you explain that command before I run it?"
+* "What should I see if the fix worked?"
+
+This helps participants learn the logic of debugging instead of only copying instructions.
+
 ### Keep Yourself Safe
 
 Do not paste secrets into public tools or shared chats.
@@ -87,8 +102,6 @@ If you accidentally expose a token or secret, rotate it.
 For VPS setup:
 
 ```text
-I am in Week 1 setting up my VPS. I cannot log in with SSH.
-
 Command:
 ssh root@<my-ip>
 
@@ -118,6 +131,17 @@ I already added the token to config.toml and restarted the service.
 Here are the logs.
 
 Please give me a step-by-step checklist from simplest to most likely.
+```
+
+For MkDocs or GitHub Pages:
+
+```text
+My site is not building or deploying as expected.
+
+Here is my mkdocs.yml or GitHub Actions error:
+[paste snippet]
+
+Please identify the likely cause, tell me the next 3 checks, and explain how to verify the fix worked.
 ```
 
 ### A Simple Rule

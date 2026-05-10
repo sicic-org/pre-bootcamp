@@ -1,12 +1,93 @@
-# MkDocs: Building the Knowledge Base
+# MkDocs: Turning Notes into a Real Knowledge Base
 
-In Week 3, we transform "hidden logs" into "public assets". MkDocs is a static site generator that turns your Markdown files into a professional documentation site.
+Week 3 is where your files stop feeling like internal scraps and start becoming a real public resource.
+
+By this point in the Intro Track, your agent can help produce useful outputs. MkDocs is what helps you turn those outputs into a clean, structured site that other people can actually read.
+
+### Why This Matters
+
+Without documentation, valuable work stays buried:
+
+* inside chat history
+* inside raw folders
+* inside notes that only make sense to you
+
+MkDocs changes that.
+
+It turns Markdown files into a proper website with navigation, pages, structure, and a professional reading experience.
+
+For workshop participants, this is a major shift: your agent is no longer only helping you produce information. It is helping you build a knowledge base.
+
+### What Week 3 Adds
+
+In Week 3, you learn how to organize the outputs of your system so they can live in a GitHub repository and be presented clearly on the web.
+
+The goal is not just "make a docs site."
+
+The goal is:
+
+* keep your work structured
+* make your knowledge reusable
+* create something you can show to collaborators, clients, or your community
 
 ### The Core Logic
-* **`docs/` folder**: Where your content lives.
-* **`mkdocs.yml`**: The brain of your site. It defines the side menu, the theme (Material), and the navigation flow.
 
-### Installation (Local/VPS)
-We use `pip install mkdocs-material` to get the high-quality UI you see here.
-To preview your work before pushing to GitHub:
-`mkdocs serve`
+The basic structure is simple:
+
+* **`docs/` folder**: where your page content lives
+* **`mkdocs.yml`**: where the site structure, titles, and navigation are defined
+
+That is enough to understand the mental model.
+
+You are not building a complicated app. You are arranging Markdown files into a readable system.
+
+### Why MkDocs Is a Good Fit
+
+MkDocs works well for the Intro Track because it is:
+
+* easy to understand
+* based on plain text files
+* fast to preview
+* easy to publish later with GitHub Pages
+
+It also matches the rest of the workshop. Your agent writes Markdown. MkDocs knows how to turn Markdown into a site. The pieces fit together naturally.
+
+### Previewing the Site
+
+We use `mkdocs-material` for the site experience you see here.
+
+Typical commands include:
+
+* `pip install mkdocs-material`
+* `mkdocs serve`
+
+The important part is not memorizing the commands. The important part is understanding that you can preview the site locally, improve the structure, and only then publish it.
+
+### Ask AI If You're Stuck
+
+MkDocs problems are much easier to solve when you show AI the exact error, file path, or `mkdocs.yml` snippet instead of describing the problem vaguely.
+
+Try prompts like these:
+
+```text
+My MkDocs site is not rendering as expected.
+
+Here is my mkdocs.yml:
+[paste snippet]
+
+Here is the error or unexpected result:
+[paste error or describe exact issue]
+
+Please identify the most likely cause, give me the next 3 checks in order, and explain the fix in beginner-friendly language.
+```
+
+```text
+I have a folder of Markdown files, but I do not know how to organize them into a clear MkDocs structure.
+
+Here are the files:
+[paste list]
+
+Please suggest a simple Intro Track navigation structure and explain the reasoning.
+```
+
+For a reusable prompt template, see the [AI Debugging Guide](../support/ai-debugging.md).
