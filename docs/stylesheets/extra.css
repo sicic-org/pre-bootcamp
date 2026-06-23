@@ -247,3 +247,13 @@ html .md-nav--primary .md-nav__title[for="__drawer"] {
     font-size: 0.7rem;
     margin: 0.5rem 0 0;
 }
+
+.sicic-cta__success {
+    color: var(--brand-chrome);
+    font-weight: 700;
+    margin: 0.3rem 0 0;
+}
+
+.sicic-cta__success[hidden] {
+    display: none;
+}

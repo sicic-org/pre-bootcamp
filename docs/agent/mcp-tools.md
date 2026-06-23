@@ -66,28 +66,8 @@ The exact syntax matters less than the mental model:
 
 > **Tip:** Always verify your tools are active by running `zeroclaw agent` and checking the startup logs.
 
-### Ask AI If You're Stuck
+### This Is Where the Workshop Comes In
 
-Tool issues are much easier to solve when you show AI the relevant config and describe the symptom clearly.
+Knowing which tools your agent actually needs — and wiring them in safely — is easy to overcomplicate on your own.
 
-Try prompts like these:
-
-```text
-My research agent is supposed to use web search, but it is not behaving as expected.
-
-Here is my relevant config and skill description:
-[paste snippet]
-
-Please explain whether the issue is more likely to be tool activation, workflow design, or prompt clarity, and tell me the next 3 checks.
-```
-
-```text
-I do not understand whether my agent really needs this tool.
-
-My agent's job is:
-[describe job]
-
-Please tell me which tools are truly necessary for an Intro Track version and which ones would add unnecessary complexity.
-```
-
-For a reusable prompt template, see the [AI Debugging Guide](../support/ai-debugging.md).
+In the live Intro Track you don't do this part alone: guided setup, daily async check-ins, and weekly office hours mean a blocker costs you minutes, not a lost weekend.

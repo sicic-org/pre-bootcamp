@@ -64,31 +64,8 @@ In the workshop, we install it together and explain just enough of the configura
 
 *Tutorial details: how `config.toml` acts as the control panel for your setup.*
 
-### Ask AI If You're Stuck
+### This Is Where the Workshop Comes In
 
-ZeroClaw problems become much easier to solve when you show AI the exact config section or startup error instead of describing the issue vaguely.
+Installing ZeroClaw and getting `config.toml` right is the step where solo learners most often stall.
 
-Try prompts like these:
-
-```text
-ZeroClaw is installed on VPS, but it does not start correctly.
-
-Here is the relevant part of config.toml:
-[paste snippet]
-
-Here is the error:
-[paste error]
-
-Please identify the most likely cause, give me the next 3 checks in order, and explain the reasoning in beginner-friendly language.
-```
-
-```text
-I do not understand what this ZeroClaw configuration section is doing.
-
-Here is the snippet:
-[paste snippet]
-
-Please explain each part in plain language and tell me what would break if it were wrong.
-```
-
-For a reusable prompt template, see the [AI Debugging Guide](../support/ai-debugging.md).
+In the live Intro Track you don't do this part alone: guided setup, daily async check-ins, and weekly office hours mean a blocker costs you minutes, not a lost weekend.

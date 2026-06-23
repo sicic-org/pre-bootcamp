@@ -71,31 +71,8 @@ If you can describe the work clearly, you can teach the agent to do it clearly. 
 
 That is why Week 2 starts with design before personality files or tools.
 
-### Ask AI If You're Stuck
+### This Is Where the Workshop Comes In
 
-Workflow design gets easier when you ask AI to help you turn a vague idea into a bounded task.
+Turning a vague idea into a bounded, buildable agent workflow is harder than it looks from the outside.
 
-Try prompts like these:
-
-```text
-I want to build an agent for this job:
-[describe the job]
-
-Please turn it into a simple workflow with:
-1. 5 to 8 steps
-2. DO vs DECIDE labels
-3. a clear trigger
-4. a clear output
-5. a recommendation for what the first version should and should not do
-```
-
-```text
-I think my agent idea is too broad.
-
-Here is the idea:
-[paste idea]
-
-Please simplify it into a good beginner agent for the Intro Track and explain why that version is easier to build.
-```
-
-For a reusable prompt template, see the [AI Debugging Guide](../support/ai-debugging.md).
+In the live Intro Track you don't do this part alone: guided setup, daily async check-ins, and weekly office hours mean a blocker costs you minutes, not a lost weekend.

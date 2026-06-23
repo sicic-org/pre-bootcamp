@@ -60,30 +60,8 @@ At that point, your phone and your VPS are linked.
 
 For many people, this is the first moment the workshop "clicks." It stops feeling like theory and starts feeling like ownership.
 
-### Ask AI If You're Stuck
+### This Is Where the Workshop Comes In
 
-Telegram issues are usually easy to debug if you give AI the exact symptom, what you already configured, and any logs you can see.
+Wiring Telegram to your agent — BotFather, tokens, the allowlist — is fiddly to get right on your own.
 
-Try prompts like these:
-
-```text
-My Telegram bot exists, but it does not respond when I send a message.
-
-What I already did:
-- created the bot with BotFather
-- added the token to config.toml
-- restarted the service
-
-Here are the logs:
-[paste logs]
-
-Please give me a step-by-step checklist from simplest to most likely, and tell me how to verify each step.
-```
-
-```text
-I connected Telegram to my agent, but I do not understand how the message flow works between Telegram, the bot token, ZeroClaw, and my VPS.
-
-Please explain it in plain language using the Intro Track architecture.
-```
-
-For a reusable prompt template, see the [AI Debugging Guide](../support/ai-debugging.md).
+In the live Intro Track you don't do this part alone: guided setup, daily async check-ins, and weekly office hours mean a blocker costs you minutes, not a lost weekend.

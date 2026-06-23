@@ -61,28 +61,8 @@ In the workshop, this section becomes a guided walkthrough: connecting to the se
 
 You will see commands such as `ssh root@<your-ip>` and `apt update`, but the important part is not memorizing commands. The important part is understanding what each step is doing and why it belongs in a safe setup.
 
-### Ask AI If You're Stuck
+### This Is Where the Workshop Comes In
 
-If you hit a blocker in Week 1, do not guess blindly. Ask AI with the exact command and the exact error.
+Connecting to a server, locking down SSH, and building the right security habits is exactly where beginners get stuck when they try it alone.
 
-Try prompts like these:
-
-```text
-I cannot connect to my VPS with SSH.
-
-Command:
-ssh root@<my-ip>
-
-Error:
-[paste exact error]
-
-Please tell me the most likely cause, the next 3 checks in order, and how to verify the fix worked.
-```
-
-```text
-I can access my VPS, but I do not understand which security steps matter most for a beginner setup.
-
-Please explain the purpose of SSH keys, updates, and basic hardening in plain language, and tell me what to do first.
-```
-
-For a reusable prompt template, see the [AI Debugging Guide](../support/ai-debugging.md).
+In the live Intro Track you don't do this part alone: guided setup, daily async check-ins, and weekly office hours mean a blocker costs you minutes, not a lost weekend.

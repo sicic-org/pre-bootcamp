@@ -60,25 +60,8 @@ In the Builder Track, publishing can become much more sophisticated: broader sys
 
 But in the Intro Track, this simple public publishing flow is the right finish line.
 
-### Ask AI If You're Stuck
+### This Is Where the Workshop Comes In
 
-Publishing issues are much easier to solve when you show AI the repository setup, workflow file, or deployment error directly.
+Getting GitHub Pages to actually deploy is a classic solo time-sink.
 
-Try prompts like these:
-
-```text
-My GitHub Pages site is not deploying correctly.
-
-Here is my repository setup and the relevant GitHub Actions error:
-[paste details]
-
-Please identify the most likely cause, give me the next 3 checks in order, and explain how to verify the fix worked.
-```
-
-```text
-I do not understand how GitHub, GitHub Actions, MkDocs, and GitHub Pages fit together.
-
-Please explain the publishing pipeline in plain language using the Intro Track workflow.
-```
-
-For a reusable prompt template, see the [AI Debugging Guide](../support/ai-debugging.md).
+In the live Intro Track you don't do this part alone: guided setup, daily async check-ins, and weekly office hours mean a blocker costs you minutes, not a lost weekend.

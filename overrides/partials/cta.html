@@ -2,13 +2,12 @@
   Funnel CTA shown on every page (P1.5 D).
   - Left:  diversion CTA -> paid Workshops and For Teams on the main site.
   - Right: email capture -> newsletter / cohort debrief / build checklist.
-  Boundaries handled elsewhere:
-  - {{TODO: 免费/付费的界线 — owner-decided (P1.5 E); this CTA does not change
-     the free teaching content, it only points onward.}}
-  - {{TODO: 接入邮件工具 embed — MailerLite / Buttondown / ConvertKit; replace the
-     disabled placeholder form below. Fire data-analytics-event on submit.}}
-  - {{TODO: analytics — wire data-analytics-event hooks to the same provider as the
-     main site (P2.4) so visit -> CTA click -> email capture is measurable.}}
+  Boundary (P1.5 E, owner-decided): the free site stays at the "why it matters"
+  level; hands-on setup, live support, and the 4-week cohort are the paid
+  Workshops. This CTA points onward without changing the free teaching content.
+  Email capture posts to MailerLite (account 2464925, form 191058641893197325).
+  Submit is intercepted by javascripts/email-signup.js for inline success +
+  the GA4 email_capture_submit event; double opt-in is handled in MailerLite.
 -#}
 <section class="sicic-cta" aria-label="Next steps">
   <hr class="sicic-cta__rule" />
@@ -37,16 +36,21 @@
       <p class="sicic-cta__lead">
         Add your email for the setup checklist, the cohort debrief, and updates.
       </p>
-      <form class="sicic-cta__form"
+      <form class="sicic-cta__form js-email-signup"
             data-analytics-event="email_capture_submit"
-            onsubmit="return false;">
-        <input class="sicic-cta__input" type="email" name="email"
-               placeholder="you@example.com" aria-label="Email address" disabled />
-        <button class="sicic-cta__btn sicic-cta__btn--primary" type="submit" disabled>
+            action="https://assets.mailerlite.com/jsonp/2464925/forms/191058641893197325/subscribe"
+            method="post" target="_blank">
+        <input class="sicic-cta__input" type="email" name="fields[email]"
+               placeholder="you@example.com" aria-label="Email address"
+               autocomplete="email" required />
+        <input type="hidden" name="ml-submit" value="1" />
+        <input type="hidden" name="anticsrf" value="true" />
+        <button class="sicic-cta__btn sicic-cta__btn--primary" type="submit">
           Notify me
         </button>
       </form>
-      <p class="sicic-cta__note">Email signup goes live before launch.</p>
+      <p class="sicic-cta__success" hidden>Thanks — check your inbox to confirm your email.</p>
+      <p class="sicic-cta__note">Double opt-in: we'll email you to confirm. No spam, unsubscribe anytime.</p>
     </div>
   </div>
 </section>

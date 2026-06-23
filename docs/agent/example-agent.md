@@ -68,30 +68,8 @@ This is the larger arc of the Intro Track:
 
 **Telegram request -> agent workflow -> saved file -> publishable asset**
 
-### Ask AI If You're Stuck
+### This Is Where the Workshop Comes In
 
-If you are unsure whether your first agent idea is realistic, ask AI to simplify it into a strong Intro Track version.
+Getting a first real agent working end to end is where momentum is won or lost.
 
-Try prompts like these:
-
-```text
-I want to build this kind of agent:
-[describe idea]
-
-Please turn it into a good first agent for the Intro Track.
-Include:
-1. the agent's job
-2. the SOUL.md direction
-3. the SKILL.md steps
-4. the tools needed
-5. what the output should look like
-```
-
-```text
-Here is my draft SOUL.md and SKILL.md for a research agent:
-[paste draft]
-
-Please review them for clarity, scope, and beginner-friendliness. Tell me what is too broad, too vague, or missing.
-```
-
-For a reusable prompt template, see the [AI Debugging Guide](../support/ai-debugging.md).
+In the live Intro Track you don't do this part alone: guided setup, daily async check-ins, and weekly office hours mean a blocker costs you minutes, not a lost weekend.

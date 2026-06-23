@@ -63,31 +63,8 @@ Typical commands include:
 
 The important part is not memorizing the commands. The important part is understanding that you can preview the site locally, improve the structure, and only then publish it.
 
-### Ask AI If You're Stuck
+### This Is Where the Workshop Comes In
 
-MkDocs problems are much easier to solve when you show AI the exact error, file path, or `mkdocs.yml` snippet instead of describing the problem vaguely.
+Setting up MkDocs and shaping a pile of notes into a clean site trips up most first-timers.
 
-Try prompts like these:
-
-```text
-My MkDocs site is not rendering as expected.
-
-Here is my mkdocs.yml:
-[paste snippet]
-
-Here is the error or unexpected result:
-[paste error or describe exact issue]
-
-Please identify the most likely cause, give me the next 3 checks in order, and explain the fix in beginner-friendly language.
-```
-
-```text
-I have a folder of Markdown files, but I do not know how to organize them into a clear MkDocs structure.
-
-Here are the files:
-[paste list]
-
-Please suggest a simple Intro Track navigation structure and explain the reasoning.
-```
-
-For a reusable prompt template, see the [AI Debugging Guide](../support/ai-debugging.md).
+In the live Intro Track you don't do this part alone: guided setup, daily async check-ins, and weekly office hours mean a blocker costs you minutes, not a lost weekend.

@@ -34,10 +34,6 @@ nav:
   - 4. Documentation:
       - "MkDocs: Build the Wiki": docs-site/mkdocs-setup.md
       - "GitHub Pages: Go Public": docs-site/github-pages.md
-  - 5. Support:
-      - "AI Debugging Guide": support/ai-debugging.md
-      - "Troubleshooting Dictionary": support/errors.md
-      - "Self-Check Challenge": support/self-check.md
 
 markdown_extensions:
   - admonition
@@ -53,6 +49,7 @@ extra_css:
 
 extra_javascript:
   - javascripts/analytics-events.js
+  - javascripts/email-signup.js
 
 extra:
   # Google Analytics 4 (P1.5 D / P2.4). Material injects gtag.js for this property.

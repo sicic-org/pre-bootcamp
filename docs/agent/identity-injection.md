@@ -70,35 +70,8 @@ In more advanced systems, agent structure can expand into more files, more tools
 
 But for the Intro Track, `SOUL.md` and `SKILL.md` are the right level of complexity. They are enough to help you understand the logic of agent design without drowning in framework details.
 
-### Ask AI If You're Stuck
+### This Is Where the Workshop Comes In
 
-AI can help you turn vague instincts about the agent into clearer `SOUL` and `SKILL` instructions.
+Writing a `SOUL.md` and `SKILL.md` that genuinely change how your agent behaves takes iteration and a second pair of eyes.
 
-Try prompts like these:
-
-```text
-I want to build a research agent on this topic:
-[describe topic or use case]
-
-Please draft a beginner-friendly SOUL.md with:
-1. the role
-2. 4 core values
-3. 4 anti-patterns
-4. a concise tone
-```
-
-```text
-I need help writing SKILL.md for my research agent.
-
-The task is:
-[describe task]
-
-Please turn it into a step-by-step skill with:
-1. trigger
-2. tool usage
-3. workflow steps
-4. output format
-5. stop condition
-```
-
-For a reusable prompt template, see the [AI Debugging Guide](../support/ai-debugging.md).
+In the live Intro Track you don't do this part alone: guided setup, daily async check-ins, and weekly office hours mean a blocker costs you minutes, not a lost weekend.
