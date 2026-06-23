@@ -95,3 +95,165 @@ html .md-nav--primary .md-nav__title[for="__drawer"] {
         display: none;
     }
 }
+
+/* SICIC logo sits on the dark header/drawer chrome. The brand mark is dark
+   line-art, so put it on a white chip for contrast (works whether the PNG
+   background is white or transparent). */
+.md-header__button.md-logo img,
+.md-nav__button.md-logo img {
+    background: #fff;
+    border-radius: 0.25rem;
+    height: 2.4rem;
+    padding: 0.2rem;
+    width: auto;
+}
+
+/* Small CPD member badge in the header, right of the site title. */
+.md-header__cpd {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    margin-left: 0.6rem;
+}
+
+.md-header__cpd img {
+    background: #fff;
+    border-radius: 0.25rem;
+    display: block;
+    height: 2.6rem;
+    padding: 0.25rem;
+    width: auto;
+}
+
+/* CPD membership badge in the footer (dark chrome) — white chip for legibility. */
+.sicic-cpd {
+    align-items: center;
+    display: flex;
+    gap: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
+.sicic-cpd__badge {
+    background: #fff;
+    border-radius: 0.3rem;
+    flex: 0 0 auto;
+    height: auto;
+    padding: 0.3rem;
+    width: 3rem;
+}
+
+.sicic-cpd__text {
+    font-size: 0.66rem;
+    line-height: 1.4;
+    opacity: 0.95;
+}
+
+.md-copyright__attribution {
+    opacity: 0.8;
+}
+
+/* Funnel CTA appended to every page (P1.5 D). */
+.sicic-cta {
+    margin: 2.5rem 0 1rem;
+}
+
+.sicic-cta__rule {
+    border: none;
+    border-top: 1px solid rgba(34, 56, 84, 0.15);
+    margin-bottom: 1.6rem;
+}
+
+.sicic-cta__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    background: var(--brand-search);
+    border: 1px solid rgba(34, 56, 84, 0.12);
+    border-radius: 0.4rem;
+    padding: 1.4rem 1.6rem;
+}
+
+@media screen and (min-width: 60em) {
+    .sicic-cta__grid {
+        grid-template-columns: 1.3fr 1fr;
+    }
+
+    .sicic-cta__col--email {
+        border-left: 1px solid rgba(34, 56, 84, 0.12);
+        padding-left: 1.6rem;
+    }
+}
+
+.sicic-cta__title {
+    color: var(--brand-chrome);
+    margin: 0 0 0.4rem;
+}
+
+.sicic-cta__lead {
+    color: var(--brand-chrome);
+    margin: 0 0 0.9rem;
+}
+
+.sicic-cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.sicic-cta__btn {
+    display: inline-block;
+    border: 1px solid var(--brand-chrome);
+    border-radius: 0.3rem;
+    color: var(--brand-chrome);
+    font-weight: 700;
+    padding: 0.45rem 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sicic-cta__btn:hover,
+.sicic-cta__btn:focus-visible {
+    background-color: var(--brand-chrome);
+    color: #fff;
+}
+
+.sicic-cta__btn--primary {
+    background-color: var(--brand-highlight);
+    border-color: var(--brand-highlight);
+    color: #fff;
+}
+
+.sicic-cta__btn--primary:hover,
+.sicic-cta__btn--primary:focus-visible {
+    background-color: var(--brand-chrome);
+    border-color: var(--brand-chrome);
+}
+
+.sicic-cta__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.sicic-cta__input {
+    flex: 1 1 12rem;
+    border: 1px solid rgba(34, 56, 84, 0.3);
+    border-radius: 0.3rem;
+    padding: 0.45rem 0.6rem;
+}
+
+.sicic-cta__note {
+    color: rgba(34, 56, 84, 0.7);
+    font-size: 0.7rem;
+    margin: 0.5rem 0 0;
+}
+
+.sicic-cta__success {
+    color: var(--brand-chrome);
+    font-weight: 700;
+    margin: 0.3rem 0 0;
+}
+
+.sicic-cta__success[hidden] {
+    display: none;
+}
