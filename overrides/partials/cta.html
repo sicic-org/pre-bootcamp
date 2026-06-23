@@ -1,0 +1,52 @@
+{#-
+  Funnel CTA shown on every page (P1.5 D).
+  - Left:  diversion CTA -> paid Workshops and For Teams on the main site.
+  - Right: email capture -> newsletter / cohort debrief / build checklist.
+  Boundaries handled elsewhere:
+  - {{TODO: 免费/付费的界线 — owner-decided (P1.5 E); this CTA does not change
+     the free teaching content, it only points onward.}}
+  - {{TODO: 接入邮件工具 embed — MailerLite / Buttondown / ConvertKit; replace the
+     disabled placeholder form below. Fire data-analytics-event on submit.}}
+  - {{TODO: analytics — wire data-analytics-event hooks to the same provider as the
+     main site (P2.4) so visit -> CTA click -> email capture is measurable.}}
+-#}
+<section class="sicic-cta" aria-label="Next steps">
+  <hr class="sicic-cta__rule" />
+  <div class="sicic-cta__grid">
+    <div class="sicic-cta__col">
+      <h2 class="sicic-cta__title">Ready to build the real thing?</h2>
+      <p class="sicic-cta__lead">
+        This free Intro Track shows the shape of the system. When you want
+        hands-on guidance, a reviewed build, and member identity, continue with us.
+      </p>
+      <div class="sicic-cta__actions">
+        <a class="sicic-cta__btn sicic-cta__btn--primary"
+           href="https://community.sicic.org/workshops/"
+           data-analytics-event="diversion_cta_workshops">
+          Join a Workshop →
+        </a>
+        <a class="sicic-cta__btn"
+           href="https://community.sicic.org/teams/"
+           data-analytics-event="diversion_cta_teams">
+          Bring this to your team →
+        </a>
+      </div>
+    </div>
+    <div class="sicic-cta__col sicic-cta__col--email">
+      <h3 class="sicic-cta__title">Get the build checklist</h3>
+      <p class="sicic-cta__lead">
+        Add your email for the setup checklist, the cohort debrief, and updates.
+      </p>
+      <form class="sicic-cta__form"
+            data-analytics-event="email_capture_submit"
+            onsubmit="return false;">
+        <input class="sicic-cta__input" type="email" name="email"
+               placeholder="you@example.com" aria-label="Email address" disabled />
+        <button class="sicic-cta__btn sicic-cta__btn--primary" type="submit" disabled>
+          Notify me
+        </button>
+      </form>
+      <p class="sicic-cta__note">Email signup goes live before launch.</p>
+    </div>
+  </div>
+</section>
