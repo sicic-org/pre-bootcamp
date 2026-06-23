@@ -1,8 +1,12 @@
 site_name: Super Individuals Bootcamp
 site_description: The definitive guide to building your ZeroClaw Agent.
+# Canonical / sitemap / og links resolve against this domain (P1.5 A).
+site_url: https://learn.sicic.org/
 theme:
   name: material
   custom_dir: overrides
+  # SICIC brand logo for the top-left home link (P1.5 D / branding).
+  logo: assets/images/sicic-logo.png
   palette:
     scheme: default
     primary: white
@@ -47,7 +51,16 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/analytics-events.js
+
 extra:
+  # Google Analytics 4 (P1.5 D / P2.4). Material injects gtag.js for this property.
+  # Funnel events (diversion CTA + email capture) are sent from
+  # javascripts/analytics-events.js via the data-analytics-event hooks.
+  analytics:
+    provider: google
+    property: G-FK33KEZD5K
   header_links:
     - label: SICIC Website
       url: https://community.sicic.org

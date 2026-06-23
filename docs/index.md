@@ -79,6 +79,6 @@ If that is what you are looking for, use this Intro Track to understand the foun
 This knowledge base is a living document, curated and maintained by the **Super Individuals CIC** ecosystem. 
 
 * **Yiju Jia & Dr. Bijun Li** — Co-Founding Directors & Chief Architects
-* **Founding Cohort Member** — Founding Cohort Member & Debugging Contributors
+<!-- * *{{TODO: Founding Cohort Member name(s) — Debugging Contributors}}* -->
 
 > **Join the Build:** Found a typo? Discovered a better MCP tool? We encourage active builders to contribute. Ping us in the Discord `#resource-library` channel to suggest updates.
