@@ -17,3 +17,7 @@ env/
 
 # OS/editor noise
 .DS_Store
+
+.agnets/
+.claude/
+.codex

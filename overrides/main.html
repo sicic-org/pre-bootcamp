@@ -4,6 +4,15 @@
 -#}
 {% extends "base.html" %}
 
+{#- Fraunces (brand serif for headings/display). Inter is loaded by the
+    theme.font setting in mkdocs.yml. -#}
+{% block extrahead %}
+  {{ super() }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&display=swap" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
   {{ super() }}
   {% include "partials/cta.html" %}

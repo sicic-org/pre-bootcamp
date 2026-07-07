@@ -1,8 +1,75 @@
-:root {
-    --brand-chrome: #223854;
-    --brand-highlight: #2596be;
-    --brand-search: #f8f3ec;
+/* SICIC brand palette (brand guideline):
+   Paper  #FBFAF7 / #F4F1EA  warm off-white background / muted surface
+   Ink    #14182B            near-black indigo text, primary buttons
+   Indigo #1E2547            deep brand indigo, dark sections
+   Gold   #C9952F (#B5821F)  CTAs, accents, "founding" highlights
+   Border #E7E2D8            warm borders
+   Type: Fraunces (serif) headings/display, Inter (sans) body.
+
+   The palette attribute selectors are needed because mkdocs-material sets
+   its color variables on body[data-md-color-*], which would otherwise
+   shadow values declared only on :root. */
+:root,
+[data-md-color-scheme="default"],
+[data-md-color-primary="white"],
+[data-md-color-accent="indigo"] {
+    --sicic-paper: #FBFAF7;
+    --sicic-paper-muted: #F4F1EA;
+    --sicic-ink: #14182B;
+    --sicic-indigo: #1E2547;
+    --sicic-gold: #C9952F;
+    --sicic-gold-hover: #B5821F;
+    --sicic-border: #E7E2D8;
+
+    /* Legacy aliases still used below. */
+    --brand-chrome: var(--sicic-indigo);
+    --brand-highlight: var(--sicic-gold);
+    --brand-search: var(--sicic-paper-muted);
+
+    /* Map the brand onto mkdocs-material's theme variables. */
+    --md-primary-fg-color: var(--sicic-indigo);
+    --md-primary-fg-color--dark: var(--sicic-ink);
+    --md-accent-fg-color: var(--sicic-gold);
+    --md-default-bg-color: var(--sicic-paper);
+    --md-default-fg-color: var(--sicic-ink);
+    --md-default-fg-color--light: rgba(20, 24, 43, 0.74);
+    --md-default-fg-color--lighter: rgba(20, 24, 43, 0.45);
+    --md-default-fg-color--lightest: rgba(20, 24, 43, 0.09);
+    --md-typeset-color: var(--sicic-ink);
+    --md-typeset-a-color: var(--sicic-gold-hover);
+    --md-code-bg-color: var(--sicic-paper-muted);
+    --md-code-fg-color: var(--sicic-ink);
+    --md-footer-bg-color: var(--sicic-indigo);
+    --md-footer-bg-color--dark: var(--sicic-ink);
+    --md-typeset-table-color: var(--sicic-border);
 }
+
+/* ---------- Typography ---------- */
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6,
+.md-header__topic,
+.sicic-cta__title {
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    color: var(--sicic-ink);
+    letter-spacing: -0.01em;
+}
+
+.md-typeset h1 {
+    color: var(--sicic-ink);
+    font-weight: 600;
+}
+
+::selection {
+    background: rgba(201, 149, 47, 0.3);
+}
+
+/* ---------- Header / footer chrome (deep brand indigo) ---------- */
 
 .md-header,
 .md-tabs,
@@ -28,12 +95,16 @@
 .md-footer-meta,
 .md-footer-meta a,
 .md-copyright {
-    color: #fff !important;
+    color: var(--sicic-paper) !important;
+}
+
+.md-header__topic {
+    color: var(--sicic-paper) !important;
 }
 
 html .md-nav--primary .md-nav__title[for="__drawer"] {
     background-color: var(--brand-chrome) !important;
-    color: #fff !important;
+    color: var(--sicic-paper) !important;
 }
 
 .md-header__links {
@@ -48,46 +119,68 @@ html .md-nav--primary .md-nav__title[for="__drawer"] {
     border-bottom: 2px solid transparent;
     font-size: 0.7rem;
     font-weight: 700;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
 }
 
 .md-header__link:hover,
 .md-header__link:focus-visible {
-    border-bottom-color: var(--brand-highlight);
-    color: #fff !important;
+    border-bottom-color: var(--sicic-gold);
+    color: var(--sicic-gold) !important;
 }
 
+/* ---------- Search (muted paper surface on the dark header) ---------- */
+
 .md-search__form {
-  background-color: var(--brand-search) !important;
+    background-color: var(--brand-search) !important;
 }
 
 .md-search__form:hover,
 .md-search__form:focus-within {
     background-color: var(--brand-search) !important;
-    box-shadow: inset 0 0 0 2px var(--brand-highlight);
+    box-shadow: inset 0 0 0 2px var(--sicic-gold);
 }
 
 .md-search__input,
 .md-search__input::placeholder,
 .md-search__icon,
 .md-search__icon svg {
-    color: var(--brand-chrome) !important;
+    color: var(--sicic-ink) !important;
 }
 
 .md-search__input::placeholder {
-    opacity: 0.75;
+    opacity: 0.65;
 }
+
+/* ---------- Sidebar navigation ---------- */
 
 .md-nav--primary .md-nav__link--active,
 .md-nav--primary .md-nav__item--active > .md-nav__link,
 .md-nav--primary .md-nav__link:hover,
 .md-nav--primary .md-nav__link:focus-visible {
-    color: var(--brand-highlight) !important;
+    color: var(--sicic-gold-hover) !important;
 }
 
 .md-nav--primary .md-nav__item .md-nav__link .md-ellipsis {
     transition: color 0.15s ease;
+}
+
+.md-nav__item--section > .md-nav__link {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    color: var(--sicic-ink);
+}
+
+/* Desktop sidebar title: plain brand serif on paper (the indigo chip only
+   belongs on the mobile drawer header). */
+@media screen and (min-width: 76.25em) {
+    .md-nav--primary .md-nav__title {
+        background: transparent;
+        box-shadow: none;
+        color: var(--sicic-ink);
+        font-family: "Fraunces", Georgia, serif;
+        font-weight: 600;
+    }
 }
 
 @media screen and (max-width: 76.234375em) {
@@ -96,12 +189,68 @@ html .md-nav--primary .md-nav__title[for="__drawer"] {
     }
 }
 
-/* SICIC logo sits on the dark header/drawer chrome. The brand mark is dark
-   line-art, so put it on a white chip for contrast (works whether the PNG
-   background is white or transparent). */
+/* ---------- Content details ---------- */
+
+.md-typeset a {
+    font-weight: 600;
+}
+
+.md-typeset a:hover,
+.md-typeset a:focus-visible {
+    color: var(--sicic-gold);
+}
+
+.md-typeset code {
+    border: 1px solid var(--sicic-border);
+    border-radius: 0.2rem;
+}
+
+.md-typeset pre > code {
+    border: none;
+}
+
+.md-typeset .highlight,
+.md-typeset pre {
+    border-radius: 0.3rem;
+}
+
+.md-typeset .highlight pre {
+    border: 1px solid var(--sicic-border);
+}
+
+.md-typeset blockquote {
+    border-left: 3px solid var(--sicic-gold);
+    background: var(--sicic-paper-muted);
+    border-radius: 0 0.3rem 0.3rem 0;
+    color: var(--sicic-ink);
+    padding: 0.6rem 1rem;
+}
+
+.md-typeset hr {
+    border-bottom: 1px solid var(--sicic-border);
+}
+
+.md-typeset table:not([class]) {
+    border: 1px solid var(--sicic-border);
+    border-radius: 0.3rem;
+}
+
+.md-typeset table:not([class]) th {
+    background-color: var(--sicic-paper-muted);
+    color: var(--sicic-ink);
+}
+
+.md-typeset img {
+    border: 1px solid var(--sicic-border);
+    border-radius: 0.4rem;
+}
+
+/* ---------- Logo chips (dark chrome needs a light chip behind the
+   dark line-art brand marks) ---------- */
+
 .md-header__button.md-logo img,
 .md-nav__button.md-logo img {
-    background: #fff;
+    background: var(--sicic-paper);
     border-radius: 0.25rem;
     height: 2.4rem;
     padding: 0.2rem;
@@ -117,7 +266,7 @@ html .md-nav--primary .md-nav__title[for="__drawer"] {
 }
 
 .md-header__cpd img {
-    background: #fff;
+    background: var(--sicic-paper);
     border-radius: 0.25rem;
     display: block;
     height: 2.6rem;
@@ -125,7 +274,7 @@ html .md-nav--primary .md-nav__title[for="__drawer"] {
     width: auto;
 }
 
-/* CPD membership badge in the footer (dark chrome) — white chip for legibility. */
+/* CPD membership badge in the footer (dark chrome) — light chip for legibility. */
 .sicic-cpd {
     align-items: center;
     display: flex;
@@ -134,7 +283,7 @@ html .md-nav--primary .md-nav__title[for="__drawer"] {
 }
 
 .sicic-cpd__badge {
-    background: #fff;
+    background: var(--sicic-paper);
     border-radius: 0.3rem;
     flex: 0 0 auto;
     height: auto;
@@ -152,14 +301,15 @@ html .md-nav--primary .md-nav__title[for="__drawer"] {
     opacity: 0.8;
 }
 
-/* Funnel CTA appended to every page (P1.5 D). */
+/* ---------- Funnel CTA appended to every page (P1.5 D) ---------- */
+
 .sicic-cta {
     margin: 2.5rem 0 1rem;
 }
 
 .sicic-cta__rule {
     border: none;
-    border-top: 1px solid rgba(34, 56, 84, 0.15);
+    border-top: 1px solid var(--sicic-border);
     margin-bottom: 1.6rem;
 }
 
@@ -167,10 +317,10 @@ html .md-nav--primary .md-nav__title[for="__drawer"] {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.6rem;
-    background: var(--brand-search);
-    border: 1px solid rgba(34, 56, 84, 0.12);
-    border-radius: 0.4rem;
-    padding: 1.4rem 1.6rem;
+    background: var(--sicic-paper-muted);
+    border: 1px solid var(--sicic-border);
+    border-radius: 0.5rem;
+    padding: 1.6rem 1.8rem;
 }
 
 @media screen and (min-width: 60em) {
@@ -179,18 +329,18 @@ html .md-nav--primary .md-nav__title[for="__drawer"] {
     }
 
     .sicic-cta__col--email {
-        border-left: 1px solid rgba(34, 56, 84, 0.12);
+        border-left: 1px solid var(--sicic-border);
         padding-left: 1.6rem;
     }
 }
 
 .sicic-cta__title {
-    color: var(--brand-chrome);
+    color: var(--sicic-ink);
     margin: 0 0 0.4rem;
 }
 
 .sicic-cta__lead {
-    color: var(--brand-chrome);
+    color: var(--md-default-fg-color--light);
     margin: 0 0 0.9rem;
 }
 
@@ -200,33 +350,44 @@ html .md-nav--primary .md-nav__title[for="__drawer"] {
     gap: 0.7rem;
 }
 
-.sicic-cta__btn {
+/* Scoped under .md-typeset so the button colors beat the generic
+   .md-typeset a link color. */
+.sicic-cta__btn,
+.md-typeset .sicic-cta__btn {
     display: inline-block;
-    border: 1px solid var(--brand-chrome);
+    border: 1px solid var(--sicic-ink);
     border-radius: 0.3rem;
-    color: var(--brand-chrome);
+    color: var(--sicic-ink);
     font-weight: 700;
     padding: 0.45rem 0.9rem;
     text-decoration: none;
-    transition: background-color 0.15s ease, color 0.15s ease;
+    transition: background-color 0.15s ease, border-color 0.15s ease,
+        color 0.15s ease;
 }
 
 .sicic-cta__btn:hover,
-.sicic-cta__btn:focus-visible {
-    background-color: var(--brand-chrome);
-    color: #fff;
+.sicic-cta__btn:focus-visible,
+.md-typeset .sicic-cta__btn:hover,
+.md-typeset .sicic-cta__btn:focus-visible {
+    background-color: var(--sicic-ink);
+    color: var(--sicic-paper);
 }
 
-.sicic-cta__btn--primary {
-    background-color: var(--brand-highlight);
-    border-color: var(--brand-highlight);
-    color: #fff;
+/* Gold = CTAs / accents; ink text keeps the contrast readable on gold. */
+.sicic-cta__btn--primary,
+.md-typeset .sicic-cta__btn--primary {
+    background-color: var(--sicic-gold);
+    border-color: var(--sicic-gold);
+    color: var(--sicic-ink);
 }
 
 .sicic-cta__btn--primary:hover,
-.sicic-cta__btn--primary:focus-visible {
-    background-color: var(--brand-chrome);
-    border-color: var(--brand-chrome);
+.sicic-cta__btn--primary:focus-visible,
+.md-typeset .sicic-cta__btn--primary:hover,
+.md-typeset .sicic-cta__btn--primary:focus-visible {
+    background-color: var(--sicic-gold-hover);
+    border-color: var(--sicic-gold-hover);
+    color: var(--sicic-paper);
 }
 
 .sicic-cta__form {
@@ -237,19 +398,28 @@ html .md-nav--primary .md-nav__title[for="__drawer"] {
 
 .sicic-cta__input {
     flex: 1 1 12rem;
-    border: 1px solid rgba(34, 56, 84, 0.3);
+    background: var(--sicic-paper);
+    border: 1px solid var(--sicic-border);
     border-radius: 0.3rem;
+    color: var(--sicic-ink);
+    font-family: inherit;
     padding: 0.45rem 0.6rem;
 }
 
+.sicic-cta__input:focus-visible {
+    border-color: var(--sicic-gold);
+    box-shadow: 0 0 0 2px rgba(201, 149, 47, 0.25);
+    outline: none;
+}
+
 .sicic-cta__note {
-    color: rgba(34, 56, 84, 0.7);
+    color: var(--md-default-fg-color--light);
     font-size: 0.7rem;
     margin: 0.5rem 0 0;
 }
 
 .sicic-cta__success {
-    color: var(--brand-chrome);
+    color: var(--sicic-ink);
     font-weight: 700;
     margin: 0.3rem 0 0;
 }

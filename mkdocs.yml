@@ -7,6 +7,11 @@ theme:
   custom_dir: overrides
   # SICIC brand logo for the top-left home link (P1.5 D / branding).
   logo: assets/images/sicic-logo.png
+  # Brand typography: Inter for body (Fraunces for headings is loaded in
+  # overrides/main.html and applied in stylesheets/extra.css).
+  font:
+    text: Inter
+    code: JetBrains Mono
   palette:
     scheme: default
     primary: white
